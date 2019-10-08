@@ -1,0 +1,36 @@
+yhfathn@gmail.com
+一、TencentOS Tiny 简介
+
+TencentOS tiny是腾讯(http://www.tencent.com)面向物联网领域开发的实时操作系统，具有低功耗，低资源占用，模块化，安全可靠等特点，可有效提升物联网终端产品开发效率。TencentOS tiny 提供精简的 RTOS 内核，内核组件可裁剪可配置，可快速移植到多种主流 MCU (如STM32全系列)及模组芯片上。而且，基于RTOS内核提供了丰富的物联网组件，内部集成主流物联网协议栈（如 CoAP/MQTT/TLS/DTLS/LoRaWAN/NB-IoT 等），可助力物联网终端设备及业务快速接入腾讯云物联网平台。
+1、TencentOS tiny整体架构
+TencentOS tiny 主体架构图，从下到上主要包括：
+
+    - CPU 库 ：TencentOS tiny 支持的 CPU IP 核架构，当前主要支持 ARM Cortex M0/3/4/7。
+
+    - 驱动管理层 ：包括板级支持包（BSP，主要由 MCU 芯片厂家开发与维护）、硬件抽象（HAL，主要由 TencentOS tiny提供，方便不同芯片的适配与移植）、设备驱动（Drivers，例如 Wi-Fi、GPRS、LoRa 等模块的驱动程序）。
+
+    - 内核 ：TencentOS tiny 实时内核包括任务管理、实时调度、时间管理、中断管理、内存管理、异常处理、软件定时器、链表、消息队列、信号量、互斥锁、事件标志等模块。
+
+    - IoT 协议栈：TencentOS tiny 提供 lwip、AT Adapter、SAL 层，支持不同的网络硬件，例如以太网、串口 Wi-Fi、GPRS、NB-IoT、4G等通信模块。TCP/IP 网络协议栈上提供常用的物联网协议栈，例如 CoAP、MQTT，支撑终端业务快速接入腾讯云。
+
+
+二、TencentOS tiny 参考文档
+
+1、移植指南
+
+    - TencentOS tiny移植指南（*KEIL版本*）
+    
+    - TencentOS tiny移植指南（IAR版本）
+    
+    - TencentOS tiny移植指南（GCC版本）
+
+2、TencentOS tiny 开发指南
+
+    - TencentOS tiny内核开发指南
+    
+    - TencentOS tiny API参考
+    
+    - TencentOS tiny对接腾讯云IoTHub开发指南
+yhfathn@gmail.com
+
+
